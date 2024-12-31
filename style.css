@@ -23,7 +23,7 @@ body{
     margin-left: 30%;
     text-align: center;
     line-height: 110px;
-    color: white;
+    color: rgb(255,255,255);
 }
 
 @media (max-width: 600px) {
@@ -45,6 +45,6 @@ body{
         text-align: center;
         line-height: 20px;
         font-size: 18px;
-        color: white;
+        color: rgb(255,255,255);
     }
 }
