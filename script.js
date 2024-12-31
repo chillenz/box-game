@@ -3,10 +3,17 @@ const box=document.getElementById("box")
 let color = 0
 
 function move(){
+    if (window.innerWidth< 600){
+        let h = Math.floor(Math.random() * 150);
+        let w = Math.floor(Math.random() * 86);
+        area.style.marginTop = `${h}%`;
+        area.style.marginLeft = `${w}%`;
+    } else if (window.innerWidth > 599){
         let h = Math.floor(Math.random() * 36);
         let w = Math.floor(Math.random() * 86);
         area.style.marginTop = `${h}%`;
         area.style.marginLeft = `${w}%`;
+    }
 }
 
 move();
@@ -25,3 +32,4 @@ function rainbow(){
 }
 
 setInterval(rainbow, 50);
+
