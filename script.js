@@ -8,6 +8,11 @@ function move() {
         let w = Math.floor(Math.random() * 86);
         area.style.marginTop = `${h}%`;
         area.style.marginLeft = `${w}%`;
+    } else if(1300 >window.innerWidth > 600){
+        let h = Math.floor(Math.random() * 75);
+        let w = Math.floor(Math.random() * 86);
+        area.style.marginTop = `${h}%`;
+        area.style.marginLeft = `${w}%`;
     } else {
         let h = Math.floor(Math.random() * 36);
         let w = Math.floor(Math.random() * 86);
@@ -20,7 +25,7 @@ function updateEventListener() {
     area.removeEventListener("click", move);
     area.removeEventListener("mouseenter", move);
 
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 1300) {
         area.addEventListener("click", move);
     } else {
         area.addEventListener("mouseenter", move);
