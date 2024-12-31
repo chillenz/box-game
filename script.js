@@ -16,20 +16,15 @@ function move() {
     }
 }
 
-function updateEventListener() {
-    area.removeEventListener("click", move);
-    area.removeEventListener("mouseenter", move);
-
-    if (window.innerWidth < 600) {
-        area.addEventListener("click", move);
-    } else {
-        area.addEventListener("mouseenter", move);
-    }
+if (window.innerWidth < 600) {
+    area.addEventListener("click", move);
+} else {
+    area.addEventListener("mouseenter", move);
 }
 
-updateEventListener();
-
-window.addEventListener("resize", updateEventListener);
+box.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+});
 
 function rainbow() {
     if (color < 360) {
